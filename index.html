@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css" id="styles">
+    <title>Document</title>
+</head>
+<body>
+    <div class="contrast" id="boton-estilos">
+        <input type="hidden" value="1" id="state-style">
+    </div>
+</body>
+</html>
+<script>
+    let boton=document.querySelector("#boton-estilos");
+    let style=document.querySelector("#styles");
+    let state=document.querySelector("#state-style");
+    let url = "";    
+    boton.addEventListener("click",()=>{
+        if(state.value==1){
+            url="css/styles2.css";
+            state.value=0;
+        }else{
+            url="css/styles.css";
+            state.value=1;
+        }
+        style.href=url
+    });
+</script>
